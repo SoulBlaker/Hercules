@@ -2940,7 +2940,7 @@ const char* npc_parse_script(char* w1, char* w2, char* w3, char* w4, const char*
 	script_start = strstr(start,",{");
 	end = strchr(start,'\n');
 
-	if (dir < 0 || dir > 7) {
+	if (dir < 0 || dir > 8) {
 		ShowError("npc_parse_script: Invalid NPC facing direction '%d' in file '%s', line '%d'.\n", dir, filepath, strline(buffer, start-buffer));
 		if (retval) *retval = EXIT_FAILURE;
 		return npc->skip_script(script_start, buffer, filepath, retval); // continue
